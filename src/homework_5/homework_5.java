@@ -3,7 +3,6 @@ package homework_5;
 import java.util.Random;
 import java.util.Scanner;
 
-import static com.sun.org.apache.bcel.internal.classfile.Utility.printArray;
 
 
 public class homework_5 {
