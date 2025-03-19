@@ -9,6 +9,7 @@ public class homework_5 {
     public static void main(String[]args){
         array();
         chessBoard();
+        array2();
 
     }
     public static void array(){
@@ -56,6 +57,7 @@ public class homework_5 {
 
     // task 2
     public static void chessBoard() {
+        System.out.println("****************");
         String[][] chessBoard = new String[8][8];
         int i;
         for (i = 0; i < 8; i++) {
@@ -76,5 +78,17 @@ public class homework_5 {
             }
             System.out.println();
         }
+    }
+    // edition task
+    public static void array2(){
+       int[][] array = {{1,2,3}, {4,5,6}, {7,8,9}};
+       int sum =0;
+       for (int i=0; i< array.length; i++){
+           for (int j=0; j< array.length; j++){
+               sum += array[i][j];
+           }
+       }
+       System.out.println("****************");
+       System.out.println("Сумма всех элементов массива: " + sum);
     }
 }
