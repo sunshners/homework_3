@@ -3,12 +3,11 @@ import java.util.Scanner;
 public class guess2 {
         public static void main(String[] args) {
             // Загаданное слово
-            String wordToGuess = "JAVA";
+            String wordToGuess = "MUSIC" ;
             StringBuilder guessedLetters = new StringBuilder();
             int attempts = 7;
 
             Scanner scanner = new Scanner(System.in);
-
             System.out.println("Добро пожаловать в игру 'Угадай слово'!");
 
             while (attempts > 0) {
