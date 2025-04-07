@@ -129,7 +129,11 @@ public class lesson_6 {
         return String.valueOf(word).equalsIgnoreCase(input);
     }
 
+
+
     public static Scanner input(){
         return new Scanner(System.in);
     }
+
+
 }
