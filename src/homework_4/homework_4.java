@@ -43,31 +43,39 @@ public class homework_4 {
     // без указанного числа.
     public static void remoovNum(){
         Scanner sc = new Scanner(System.in);
-        int[] iData = new int[]{1,2,3,4,5,6,7,8,9,10};
+        int[] Array = {1,2,3,4,5,6,7,8,9,10};
         System.out.println("****************");
+        System.out.println("Исходный массив: ");
+        for (int num : Array){
+            System.out.println( num + " ");
+            System.out.println();
+        }
+
        System.out.print("Введите число для удаления: ");
        int numberToRemoove = sc.nextInt();
-        List<Integer>newList = new ArrayList<>();
-        boolean found = false;
-        for (int num : iData){
-            if (num == numberToRemoove){
-                found = true;
-            } else {
-                newList.add(num);
-            }
-        }
-        if (!found){
-            System.out.println("Число " + numberToRemoove + " не найдено в массиве.");
-        } else {
-            int[] newArray = new int[newList.size()];
-            for (int i=0; i< newList.size(); i++){
-                newArray[i] = newList.get(i);
-            }
-            System.out.println("Новый массив без числа " + numberToRemoove + " : ");
-            for (int num : newArray){
-                System.out.println(num + " ");
-            }
-        }
+       int count = 0;
+       for (int num : Array){
+           if (num == numberToRemoove){
+               count ++;
+           }
+       }
+       if (count == 0) {
+           System.out.println("Число " + numberToRemoove + "Не найдено в массиве ");
+       } else {
+           int[] newArray = new int [Array.length - count];
+           int index = 0;
+           for (int num : Array){
+               if (num != numberToRemoove){
+                   newArray[index] = num;
+                   index++;
+               }
+           }
+           System.out.println("Новый массив: ");
+           for (int num : newArray){
+               System.out.println(num + " ");
+           }
+           System.out.println();
+       }
     }
 
     // Задание 3 - создать и заполнить масси случайными числами и вывести макс, мин и среднее значение. Для генерации
